@@ -5,6 +5,4 @@
 
 const std::string GOON_VERSION = "0.0.1";
 
-const std::vector[]
-
 #endif

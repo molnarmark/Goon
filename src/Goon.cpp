@@ -1,8 +1,14 @@
 #include "Goon.h"
 
-Goon::Goon() {}
+Goon::Goon() {
+  this->lexer = new Lexer();
+}
 
-int Goon::loadRawCode(std::string* rawCode) {
-  this->rawCode = rawCode;
+Goon::~Goon() {
+  delete this->lexer;
+}
+
+int Goon::loadRawCode(std::string rawCode) {
+  this->lexer->lex(rawCode);
   return 0;
 }

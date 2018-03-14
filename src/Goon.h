@@ -11,10 +11,12 @@
 class Goon {
 public:
   Goon();
-  loadRawCode(std::string *code);
+  ~Goon();
+  int loadRawCode(std::string code);
 
 private:
-  std::string* rawCode;
+  Lexer* lexer;
+  std::string rawCode;
 };
 
 #endif
